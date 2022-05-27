@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeof</title>
+</head>
+<body>
+    <script>
+
+        let data;
+        const typeData = typeof data;
+        document.writeln(typeData);
+        document.writeln("<br>");
+
+        let data1 = null;
+        const typeData1 = typeof data1;
+        document.writeln(typeData1);
+        document.writeln("<br>");
+
+        let data2 = 2;
+        const typeData2 = typeof data2;
+        document.writeln(typeData2);
+        document.writeln("<br>");
+
+        let data3 = "2";
+        const typeData3 = typeof data3;
+        document.writeln(typeData3);
+        document.writeln("<br>");
+
+        let data4 = true;
+        const typeData4 = typeof data4;
+        document.writeln(typeData4);
+        document.writeln("<br>");
+
+        let data5 = [1, 2, 3];
+        const typeData5 = typeof data5;
+        document.writeln(typeData5);
+        document.writeln("<br>");
+
+        let data6 = {
+            name: "John",
+            age: 30
+        };
+        const typeData6 = typeof data6;
+        document.writeln(typeData6);
+        document.writeln("<br>");
+
+        let data7 = function() {
+            return "Hello World";
+        };
+        const typeData7 = typeof data7;
+        document.writeln(typeData7);
+        document.writeln("<br>");
+
+        let data8 = Symbol("Hello");
+        const typeData8 = typeof data8;
+        document.writeln(typeData8);
+        document.writeln("<br>");
+
+        let data9 = new Date();
+        const typeData9 = typeof data9;
+        document.writeln(typeData9);
+        document.writeln("<br>");
+
+    </script>
+</body>
+</html>

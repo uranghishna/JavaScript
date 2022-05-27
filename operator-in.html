@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In</title>
+</head>
+<body>
+    <script>
+
+        const person ={
+            name: 'John',
+            age: 30,
+            city: 'New York'
+        };
+        
+        if("age" in person){
+            alert(`Hallo ${person.name}`);
+        }else{
+            alert("Name is not in the object");
+        }
+
+        const student={
+            name: 'John',
+            age: null,
+            city: undefined,
+            courses: ['html', 'css', 'js']
+        };
+        
+        if("city" in student){
+            document.writeln(`Hallo ${student.city}`);
+        }else{
+            document.writeln("Name is not in the object");
+        }
+
+        const fullname = ['null', 'Doe'];
+        const result = 0 in fullname;
+            document.writeln(result);
+
+    </script>
+</body>
+</html>
