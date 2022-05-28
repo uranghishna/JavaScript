@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+
+        const person ={
+            name: "Hishna",
+            age: 20,
+            hobbies: ["Reading", "Coding", "Watching Movies"],
+            role: [2, "author"]
+        }
+
+        console.log("Name: " + person.name);
+        console.log("Age: " + person.age);
+        console.log("Hobbies: " + person.hobbies);
+        console.log("Role: " + person.role);
+
+        with(person){
+            console.log("Name: " + name);
+            console.log("Age: " + age);
+            console.log("Hobbies: " + hobbies);
+            console.log("Role: " + role);
+        }
+
+    </script>
+</body>
+</html>
