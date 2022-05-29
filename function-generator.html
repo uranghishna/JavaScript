@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <script>
+
+        function* createNames(){
+            yield "Hishna";
+            yield "Difa";
+            yield "Ismail";
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            console.log(name);
+        }
+
+        //generator function
+        function* buatGanjil(value){
+            for (let i = 1; i <= value; i++) {
+                if(i % 2 == 1){
+                    console.log(`yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        const ganjil = buatGanjil(100);
+        // console.log(ganjil.next().value);
+        // console.log(ganjil.next().value);
+        for (const number of ganjil) {
+            console.log(number);
+        }
+
+    </script>
+</body>
+</html>

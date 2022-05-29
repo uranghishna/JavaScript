@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+
+        //global scope
+        let counter = 0;
+
+        function hitMe(){
+            counter++;
+            console.log(counter);
+        }
+        hitMe();
+        hitMe();
+
+        //local scope
+        function first(){
+            let firstVar = "First";
+        }
+
+        function second(){
+            let secondVar = "Second";
+        }
+        first();
+        second();
+        // console.log(firstVar);
+        // console.log(secondVar);
+
+        //nested scope
+        function luar(){
+            let luarVar = "Luar";
+            function dalam(){
+                let dalamVar = "Dalam";
+                console.log(luarVar);
+                console.log(dalamVar);
+            }
+           dalam();
+        }
+        luar();
+
+    </script>
+</body>
+</html>

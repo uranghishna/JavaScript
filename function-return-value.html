@@ -36,7 +36,6 @@
         document.writeln(finalValue);
         document.writeln("<br>");
         
-        const array = [90, 75, 55, 40, 20];
         function isContains(array, searchValue){
             for (const element of array){
                 if(element === searchValue){
@@ -45,6 +44,7 @@
             }
             return false;
         }
+        const array = [90, 75, 55, 40, 20];
         const search = 54;
         const resultSearch = isContains(array, search);
         document.writeln(resultSearch);
