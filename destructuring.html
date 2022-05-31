@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // Array
+        const names = ["Hishna", "Difa", "Ismail", "Budi", "Rizki"];
+        // const firstName = names[0];
+        // const middleName = names[1];
+        // const lastName = names[2];
+        const [firstName, middleName, lastName, ...other] = names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+        console.log(other);
+
+        console.log("===================================================");
+        // Object
+        const person = {
+            name: "Hishna",
+            age: 21,
+            address: "Jl. Kebon Jeruk",
+            school: {
+                name: "SMK Telkom Malang",
+                year: "2016"
+            },
+            hobbies: ["Futsal", "Basket", "Badminton"],
+            isMarried: false,
+            jurusan : "Informatika",
+            semester : "banyak"
+        };
+        // console.log(person.name);
+        // console.log(person.age);
+        const { name, age, address, school: { name: schoolName, year: schoolYear }, ...others } = person;
+        console.log(name);
+        console.log(age);
+        console.log(address);
+        console.log(schoolName);
+        console.log(schoolYear);
+        console.log(others);
+
+        console.log("===================================================");
+
+        function displayJelma({awal, tengah, akhir}) {
+            console.log(awal);
+            console.log(tengah);
+            console.log(akhir);
+        };
+
+        const jelma = {
+            awal: "Hishna",
+            tengah: "Difa",
+            akhir: "Ismail"
+        };
+        displayJelma(jelma);
+        
+        console.log("===================================================");
+
+        function sum([first, second]) {
+            return first + second;
+        }
+
+        console.log(sum([1, 2]));
+        console.log(sum([10, 10]));
+
+        console.log("===================================================");
+
+        {
+            const names = ["Hishna", "Difa"];
+            const [firstName, middleName, lastName = "Ismail"] = names;
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+
+        console.log("===================================================");
+
+        {
+            const names = {
+                firstName: "Hishna",
+                middleName: "Difa",
+            };
+            const { firstName, middleName, lastName = "Ismail" } = names;
+
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+        
+        console.log("===================================================");
+
+        {
+            const names = {
+                firstName: "Hishna",
+                middleName: "Difa",
+                lastName: "Joko"
+            };
+            
+            let {
+                firstName: namaDepan,
+                middleName: namaTengah,
+                lastName: namaAkhir = "Ismail"
+            } = names;
+            
+
+            console.log(namaDepan);
+            console.log(namaTengah);
+            console.log(namaAkhir);
+        }
+    </script>
+</body>
+</html>
