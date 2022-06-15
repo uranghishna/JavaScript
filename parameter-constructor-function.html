@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parameter Constructor Function</title>
+</head>
+<body>
+    <script>
+       
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello  = function(name){
+                console.log(`Hello ${name}, my name is ${this.firstName} ${this.lastName}`);
+            }
+        }
+        const hishna = new Person("Hishna", "Difa");
+        hishna.sayHello("joko");
+
+        const budi = new Person("Budi", "Susilo");
+        budi.sayHello("joko");
+
+
+        console.log(hishna);
+        console.log(budi);
+
+    </script>
+</body>
+</html>
