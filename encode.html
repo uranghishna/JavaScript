@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode</title>
+</head>
+<body>
+    <script>
+
+        {
+            const url = 'http://www.contoh.com/?name=Hishna Difa Ismail';
+            console.info(url);
+
+            const encoded = encodeURI(url);
+            console.info(encoded);
+
+            const decoded = decodeURI(url);
+            console.info(decoded);
+        }
+
+        {
+            const value = "Hishna&Difa=Ismail";
+            const url = 'http://www.contoh.com/?name=';
+
+            const encoded = encodeURIComponent(value);
+            console.info(url + encoded);
+
+            const decoded = decodeURIComponent(encoded);
+            console.info(url + decoded);
+        }
+    </script>
+</body>
+</html>

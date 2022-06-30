@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <script>
+
+        {
+            const regexp1 = /hishna/;
+            const regexp2 = new RegExp("hishna");
+            const regexp3 = new RegExp(/hishna/);
+        }
+        
+        {
+            const name = "Hishna Difa Ismail Hishna";
+            const regexp = /Hishna/;
+
+            const result = regexp.exec(name);
+            console.info(result);
+
+            const test = regexp.test(name);
+            console.info(test);
+        }
+
+        {
+            const name = "Hishna difa ismail\nDifa ismail\nhissna Ismail";
+            const regexp1 = /^his.na/igm
+            const regexp2 = /Ismail/ig
+
+            let result;
+            while ((result = regexp1.exec(name)) !== null ){
+                console.log(result);
+            }
+
+            while ((result = regexp2.exec(name)) !== null ){
+                console.log(result);
+            }
+        }
+
+        {
+            const regexp = /ek[aiueo]/ig
+            const name = "eka edo eko eki eda edi eku";
+
+            let result;
+            while ((result = regexp.exec(name)) !== null ){
+                console.log(result);
+            }
+        }
+
+        {
+            const name = "eka edo eko eki eda edi eku";
+
+            console.info(name.match(/ek[aiueo]/ig));
+            console.info(name.search(/ek[aiueo]/ig));
+            console.info(name.replace(/ek[aiueo]/i, "ganteng"));
+            console.info(name.replaceAll(/ek[aiueo]/ig, "keren"));
+            console.info(name.split(/e/ig));            
+        }
+    </script>
+</body>
+</html>
